@@ -1,7 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import { Image } from 'astro:assets';
 import supervisorsData from "../data/supervisors.json";
+import tweet1 from '../assets/tweet1.png';
+import tweet2 from '../assets/tweet2.png';
 
 export interface Supervisor {
 	name: string;
@@ -22,15 +25,22 @@ const typedSupervisorsData: Supervisor[] = supervisorsData;
 		<div class="gap-8 flex flex-col mt-8">
 			<h1 class="">Big Tax Waukesha County</h1>
 
-			<div class="instructions text-lg text-center space-y-6">
-				<h3 class="text-2xl font-bold">MAJOR UPDATE 10/22/2024</h3>
+			<div class="instructions text-lg space-y-6">
+				<h3 class="text-2xl font-bold text-center">
+					MAJOR UPDATE 10/22/2024
+				</h3>
 				<p>
 					Less than an hour before the board meeting, County Executive
 					Paul Farrow withdrew the sales tax ordinance from the
-					meeting's agenda. It will certainly be back, but this is a
-					small win.
+					meeting's agenda. It will certainly be back, but <strong
+						>this is a small win</strong
+					>.
 				</p>
 
+				<p>
+					<Image src={tweet1} alt="Description of the image" class="mx-auto" />
+				</p>
+				
 				<p>
 					Expect an intense marketing campaign from the county trying
 					to convince you that raising taxes is the only way to solve
@@ -39,6 +49,28 @@ const typedSupervisorsData: Supervisor[] = supervisorsData;
 						>right now</em
 					>, yet all it took was a few people speaking up to make them
 					delay the vote.
+				</p>
+				<p>
+					Furthermore, recall that the proposal was for a .5% tax. You
+					would expect the executive and board arrived at that number
+					through vigorous debate and analysis of financial data.
+					Afterall, Waukesha is a "conservative" county, and only the
+					bare minimum taxes should be raised. Yet, after a few people spoke up, Executive Farrow
+					acknowledged that maybe an amount less than .5% would be
+					enough. Why not start there? It's because they <em
+						>wanted</em
+					> more.
+				</p>
+
+				<p>
+					<Image src={tweet2} alt="Description of the image" class="mx-auto" />
+				</p>
+
+				<p>
+					To be clear - this budget shortfall should be solveable
+					without raising taxes. The point is that the county almost
+					got away with just doing what they want to do, but the
+					people were able to get them to pause.
 				</p>
 
 				<p>
@@ -52,26 +84,6 @@ const typedSupervisorsData: Supervisor[] = supervisorsData;
 				<p>You can make a difference.</p>
 
 				<p>Thank you for coming to my TED talk.</p>
-			</div>
-
-			<div class="mx-auto">
-				<blockquote class="twitter-tweet">
-					<p lang="en" dir="ltr">
-						My decision to withdraw the sales tax ordinance from
-						consideration is democracy in action. Postponing the
-						measure will allow for more public input and provide for
-						an opportunity to educate residents on the county’s
-						financial challenges. I will work with the County Board
-					</p>&mdash; Waukesha County Executive Paul Farrow
-					(@WaukeshaCoExec) <a
-						href="https://twitter.com/WaukeshaCoExec/status/1848872587776184733?ref_src=twsrc%5Etfw"
-						>October 22, 2024</a
-					>
-				</blockquote>
-				<script
-					async
-					src="https://platform.twitter.com/widgets.js"
-					charset="utf-8"></script>
 			</div>
 
 			<p class="instructions text-lg text-center">
